@@ -14,7 +14,6 @@ class TodoController extends Controller
         //section8追加内容
         $todo = new Todo();
         $todos = $todo->all();
-        //dd($todos);
 
         //section9追加内容
         return view('todo.index', ['todos' => $todos]);

@@ -22,3 +22,5 @@ Route::get('/todo', function () {
 Route::get('/todo', 'TodoController@index');
 //section11追加内容
 Route::get('/todo/create', 'TodoController@create');
+//section12追加内容
+Route::get('/todo/create', 'TodoController@create')->name('todo.create');

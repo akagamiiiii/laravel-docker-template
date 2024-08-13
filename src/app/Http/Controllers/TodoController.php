@@ -18,4 +18,10 @@ class TodoController extends Controller
         //section9追加内容
         return view('todo.index', ['todos' => $todos]);
     }
+
+    //section11追加内容
+    public function create()
+    {
+        return view('todo.create');
+    }   
 }

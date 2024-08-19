@@ -46,4 +46,12 @@ class TodoController extends Controller
 
         return redirect()->route('todo.index');
     }
+
+    //section16追加内容
+    public function show($id){
+        $model = new Todo();
+        $todo = $model->find($id);
+        
+        return view('todo.show', ['todo' => $todo]);
+    }
 }

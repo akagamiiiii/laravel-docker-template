@@ -28,3 +28,5 @@ Route::get('/todo/create', 'TodoController@create')->name('todo.create');
 Route::post('/todo', 'TodoController@store')->name('todo.store');
 //section16追加内容
 Route::get('/todo/{id}', 'TodoController@show')->name('todo.show');
+//section18追加内容
+Route::get('/todo/{id}/edit', 'TodoController@edit')->name('todo.edit');

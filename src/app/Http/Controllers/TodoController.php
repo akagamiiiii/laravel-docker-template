@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
+use App\Http\Requests\TodoRequest;
 //section8追加内容
 use App\Todo;
 
@@ -35,7 +36,7 @@ class TodoController extends Controller
     }   
 
     //section13追加内容
-    public function store(Request $request)
+    public function store(TodoRequest $request)
     {
         //$content = $request->input('content'); 
         //dd($request);
@@ -69,5 +70,16 @@ class TodoController extends Controller
         $todo = $this->todo->find($id);
 
         return view('todo.edit', ['todo' => $todo]);
+    }
+
+    //section19追加内容
+    public function update(TodoRequest $request, $id)
+    {
+        $inputs = $request->all(); 
+        $todo = $this->todo->find($id);
+        $todo->fill($inputs);
+        $todo->save();
+
+        return redirect()->route('todo.show', $todo->id);
     }
 }

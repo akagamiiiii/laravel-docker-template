@@ -32,3 +32,5 @@ Route::get('/todo/{id}', 'TodoController@show')->name('todo.show');
 Route::get('/todo/{id}/edit', 'TodoController@edit')->name('todo.edit');
 //section19追加内容
 Route::put('/todo/{id}', 'TodoController@update')->name('todo.update');
+//section21追加内容
+Route::delete('/todo/{id}', 'TodoController@delete')->name('todo.delete');

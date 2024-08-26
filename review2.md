@@ -54,16 +54,16 @@
   LaravelではEloquentというORMを使用していて、データベースとモデルを関連付け、柔軟なデータ操作を行うことができる。
 
 ### composer.json, composer.lockとは何か
-  composer.json...
+  composer.jsonとは、
 
     プロジェクトで使用するパッケージやライブラリ、そのバージョンを定義するファイル。
 
     プロジェクトのルートディレクトリに作成する。
   
-  composer.lock...
+  composer.lockとは、
 
     composer.jsonに基づいてインストールされたパッケージのバージョンを固定するファイル。
-    
+
     composer installコマンドを実行したときに、プロジェクトのルートディレクトリに自動生成される。
 
 ### composerでインストールしたパッケージ（ライブラリ）はどのディレクトリに格納されるのか
